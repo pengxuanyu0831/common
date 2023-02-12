@@ -10,6 +10,7 @@
     <modules>
         <module>common-tools</module>
         <module>common-config</module>
+        <module>award-service</module>
     </modules>
     <!-- 第一步 -->
     <packaging>pom</packaging>
