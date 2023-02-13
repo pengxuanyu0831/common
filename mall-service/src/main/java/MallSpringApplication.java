@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @date 2023/2/13 21:55
  */
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.xy"})
 public class MallSpringApplication {
     public static void main(String[] args) {
         SpringApplication.run(MallSpringApplication.class, args);

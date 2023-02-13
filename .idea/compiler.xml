@@ -19,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-config" options="-parameters" />
       <module name="common-tools" options="-parameters" />
+      <module name="mall-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
     </option>
   </component>

@@ -1,8 +1,11 @@
 package mall.service.impl;
 
 import mall.service.MallService;
+import order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author xuanyu peng
@@ -11,10 +14,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MallServiceImlp implements MallService {
-
+    @Autowired
+    OrderService orderService;
 
     @Override
     public String createOrderFromMall(String userId) {
-        return null;
+        return orderService.createOrder(userId);
     }
 }

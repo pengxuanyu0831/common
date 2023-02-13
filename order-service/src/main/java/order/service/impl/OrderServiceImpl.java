@@ -1,6 +1,7 @@
 package order.service.impl;
 
 import order.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
