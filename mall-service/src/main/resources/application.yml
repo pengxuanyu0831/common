@@ -1,3 +1,8 @@
 spring:
   application:
     name: mall-service
+
+server:
+  port: 9987
+  servlet:
+    context-path: /demo
