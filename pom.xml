@@ -11,8 +11,12 @@
         <module>common-tools</module>
         <module>common-config</module>
         <module>award-service</module>
+        <module>order-service</module>
+        <module>mall-service</module>
     </modules>
     <!-- 第一步 -->
+    <name>common-project</name>
+    <description>common project parent POM</description>
     <packaging>pom</packaging>
 
     <properties>
@@ -26,6 +30,13 @@
         <druid.version>1.2.6</druid.version>
         <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
     </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <!-- 子块基础之后，提供作用：锁定版本 + 子module不用写 groupId 和 version -->
     <dependencyManagement>
@@ -91,6 +102,16 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-loadbalancer</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>
