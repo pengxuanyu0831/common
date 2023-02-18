@@ -5,4 +5,4 @@ spring:
 server:
   port: 9987
   servlet:
-    context-path: /demo
+    context-path: /mall-service
