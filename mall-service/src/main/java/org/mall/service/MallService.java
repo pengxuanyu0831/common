@@ -1,4 +1,4 @@
-package mall.service;
+package org.mall.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description:
  * @date 2023/2/13 22:26
  */
-@FeignClient(name = "order-service")
+
 public interface MallService {
 
-    @GetMapping("/createOrder")
     String createOrderFromMall(String userId);
 }
 

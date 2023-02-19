@@ -1,11 +1,9 @@
-package mall.service.impl;
+package org.mall.service.impl;
 
-import mall.service.MallService;
-import order.service.OrderService;
+import org.mall.service.MallService;
+import org.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @author xuanyu peng

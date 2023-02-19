@@ -1,7 +1,8 @@
-package mall.controller;
+package org.mall.controller;
 
-import mall.service.MallService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mall.service.MallService;
+import org.order.service.OrderService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,11 +17,15 @@ import javax.annotation.Resource;
 @RequestMapping("/mall/v1")
 public class MallController {
     @Resource
-    MallService mallService;
+    private OrderService orderService;
 
-    @RequestMapping("/createOrderFromMall")
+    @Resource
+    private MallService mallService;
+
+
+    @GetMapping("/createOrderFromMall")
     public String createOrderFromMall() {
-        return mallService.createOrderFromMall("1");
+        return orderService.createOrder("1");
     }
 
 
