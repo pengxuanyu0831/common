@@ -18,6 +18,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="award-service" options="-parameters" />
       <module name="common-config" options="-parameters" />
       <module name="common-tools" options="-parameters" />
       <module name="mall-service" options="-parameters" />
