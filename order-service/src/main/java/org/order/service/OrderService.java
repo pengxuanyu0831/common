@@ -2,10 +2,7 @@ package org.order.service;
 
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author xuanyu peng
@@ -14,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(value = "order-service")
 public interface OrderService {
-    @RequestMapping(value = "/order-service/order/v1/createOrder",method = RequestMethod.GET)
-    String createOrder(@RequestParam("userId") String userId);
+
+    @GetMapping("/createOrder")
+    public String createOrder(@RequestParam("userId") String userId);
 }

@@ -2,6 +2,7 @@ package org.mall;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
@@ -10,7 +11,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @date 2023/2/13 21:55
  */
 @SpringBootApplication
-@EnableFeignClients(basePackages = {"org.order.service"})
+@EnableFeignClients(basePackages = {"org.order"})
+@EnableDiscoveryClient
 public class MallSpringApplication {
     public static void main(String[] args) {
         SpringApplication.run(MallSpringApplication.class, args);

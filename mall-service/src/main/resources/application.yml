@@ -17,5 +17,5 @@ spring:
 
 server:
   port: 9987
-  servlet:
-    context-path: /mall-service
+#  servlet:
+#    context-path: /mall-service
