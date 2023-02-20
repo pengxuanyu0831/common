@@ -24,4 +24,8 @@ server:
 logging:
   level:
     com.atguigu.springcloud.service.PaymentFeignService: debug
-
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL

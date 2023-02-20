@@ -1,7 +1,8 @@
-package org.feign;
+package org.config.feign;
 
 
 import feign.Logger;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,11 +11,13 @@ import org.springframework.context.annotation.Configuration;
  * @description:
  * @date 2023/2/20 22:06
  */
-//@Configuration
+@Configuration
+@Slf4j
 public class FeignConfig {
 
-//    @Bean
+    @Bean
     Logger.Level feignLoggerLevel() {
+        log.info(">>>>>>>>>>>>>加载 Feign 日志配置完成<<<<<<<<<<<<<");
         return Logger.Level.FULL;
     }
 }

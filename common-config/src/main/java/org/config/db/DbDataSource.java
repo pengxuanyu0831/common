@@ -1,4 +1,4 @@
-package org.db;
+package org.config.db;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Qualifier;

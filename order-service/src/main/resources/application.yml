@@ -17,3 +17,9 @@ server:
 #  servlet:
 #    context-path: /order-service
 
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+
