@@ -1,6 +1,6 @@
 spring:
   application:
-    name: mall-service
+    name: common-config
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/nacos_config?characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true
     username: root
@@ -16,7 +16,7 @@ spring:
         server-addr: 127.0.0.1:8848
 
 server:
-  port: 9987
+  port: 9900
 #  servlet:
 #    context-path: /mall-service
 

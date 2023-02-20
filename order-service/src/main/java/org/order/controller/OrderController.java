@@ -3,6 +3,7 @@ package org.order.controller;
 import org.order.service.OrderService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -19,7 +20,7 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping("/createOrder")
-    public String createOrder() {
-        return orderService.createOrder("2");
+    public String createOrder(@RequestParam("userId") String userId) {
+        return orderService.createOrder(userId);
     }
 }

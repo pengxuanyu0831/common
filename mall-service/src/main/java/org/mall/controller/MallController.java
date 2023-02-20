@@ -1,5 +1,6 @@
 package org.mall.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.mall.service.MallService;
 import org.order.service.OrderService;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -17,17 +18,19 @@ import javax.annotation.Resource;
  */
 @RestController
 //@RequestMapping("/mall/v1")
+@Slf4j
 public class MallController {
     @Resource
     private OrderService orderService;
 
-    @Resource
-    private MallService mallService;
+//    @Resource
+//    private MallService mallService;
 
 
     @GetMapping("/order/v1/createOrder")
     public String createOrderFromMall(@RequestParam("userId") String userId) {
-        return mallService.createOrderFromMall(userId);
+        log.info("请求--->>>{}",userId);
+        return orderService.createOrder(userId);
     }
 
 

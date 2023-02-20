@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(value = "order-service")
 public interface OrderService {
 
-    @GetMapping("/createOrder")
+    @GetMapping("/order/v1/createOrder")
     public String createOrder(@RequestParam("userId") String userId);
 }

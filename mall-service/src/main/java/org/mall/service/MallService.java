@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface MallService {
 
     @GetMapping("/order/v1/createOrder")
-    public String createOrderFromMall(String userId);
+    public String createOrder(String userId);
 }
 
 
