@@ -3,6 +3,7 @@ package org.mall.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.mall.service.MallService;
 import org.order.service.OrderService;
+import org.response.CommonResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,9 +29,9 @@ public class MallController {
 
 
     @GetMapping("/order/v1/createOrder")
-    public String createOrderFromMall(@RequestParam("userId") String userId) {
+    public CommonResponse<String> createOrderFromMall(@RequestParam("userId") String userId) {
         log.info("请求--->>>{}",userId);
-        return orderService.createOrder(userId);
+        return new CommonResponse(orderService.createOrder(userId));
     }
 
 
