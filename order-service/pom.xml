@@ -59,6 +59,12 @@
             <artifactId>spring-kafka</artifactId>
         </dependency>
 
+        <!-- 引入 Spring Cloud Stream Kafka 相关依赖，将 Kafka 作为消息队列，并实现对其的自动配置 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-kafka</artifactId>
+        </dependency>
+
         <!-- xxl-job-core https://github.com/xuxueli/xxl-job/-->
         <dependency>
             <groupId>com.xuxueli</groupId>

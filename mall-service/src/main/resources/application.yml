@@ -14,6 +14,12 @@ spring:
       discovery:
         enabled: true
         server-addr: 127.0.0.1:12366
+    stream:
+      bindings:
+        msg-demo:
+          destination:
+          content-type: application/json
+
 
 server:
   port: 9987
